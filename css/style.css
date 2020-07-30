@@ -114,6 +114,7 @@ body{
     display: inline-block;
     border-radius: 100px;
     transition: all .5s;
+    position: relative;
 }
 
 .btn:hover{
@@ -129,4 +130,41 @@ body{
 .btn-white{
     color: #777;
     background-color: #fff;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 400ms;
+}
+
+.btn-white::after{
+    background-color: white;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+@keyframes fromTheBottom{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.btn-animated{
+    animation: fromTheBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
