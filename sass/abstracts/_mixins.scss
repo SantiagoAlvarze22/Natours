@@ -1,0 +1,8 @@
+@mixin headingprop($display, $font-size, $font-weight, $letter-spacing, $animation){
+    display: $display;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    letter-spacing:$letter-spacing ;
+    animation:  $animation 2s ease-in;
+}
+
