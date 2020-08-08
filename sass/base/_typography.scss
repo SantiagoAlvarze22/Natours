@@ -4,7 +4,6 @@ body{
     /* font-size: 16px; */
     line-height: 1.7;
     color:$color-gray-dark;
-    padding: 3rem;
 }
 
 
@@ -14,12 +13,23 @@ body{
     backface-visibility:hidden ;
     margin-bottom: 6rem;
 
+    
     &--main{
         @include headingprop(block, 6rem, 400, 3.5rem,moveInLeft);
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-family: 5rem;
+        }
     }
     
     &--sub{
         @include headingprop(block, 2rem, 700, 1.75rem,moveInRight);
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+            font-family: 5rem;
+        }
     }
 }
 
@@ -34,6 +44,14 @@ body{
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
 
     &:hover{
         transform: skewY(2deg) skewX(15deg) scale(1.1);
