@@ -276,16 +276,6 @@ body {
   background-color: #55c57a; }
   .btn--green::after {
     background-color: #55c57a; }
-  @media (max-width: 56.25em) {
-    .btn--green {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%); } }
-  @media (max-width: 37.5em) {
-    .btn--green {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%); } }
 
 .btn::after {
   content: "";

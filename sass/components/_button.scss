@@ -51,18 +51,7 @@
             background-color: $color-primary;
         }
 
-        @include respond(tab-port){
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-           
-        }
-    
-        @include respond(phone){
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);    
-        }
+       
 
     }
 
