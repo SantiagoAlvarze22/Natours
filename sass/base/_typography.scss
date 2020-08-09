@@ -45,12 +45,24 @@ body{
     letter-spacing: 2px;
     transition: all .2s;
 
+    
     @include respond(tab-port){
         font-size: 3rem;
+        &.heading-center{
+            display: block;
+            text-align: center;
+        }
+    
     }
 
     @include respond(phone){
         font-size: 2.5rem;
+
+        &.heading-center{
+            display: block;
+            text-align: center;
+        }
+    
     }
 
     &:hover{
@@ -63,6 +75,25 @@ body{
     font-size:$default-font-size;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+        &.heading-center{
+            display: block;
+            text-align: center;
+        }
+    
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+
+        &.heading-center{
+            display: block;
+            text-align: center;
+        }
+    
+    }
 }
 .paragraph{
     font-size: $default-font-size;
