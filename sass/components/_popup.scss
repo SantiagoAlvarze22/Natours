@@ -9,6 +9,10 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+    @include respond(phone){
+        height: 100%;
+    }
+    
 
     &__content{
         @include absCenter;
@@ -21,6 +25,13 @@
         opacity: 0;
         transform:translate(-50%,-50%) scale(.25);
         transition: all .5s .2s; //delay to fade in the popup
+
+        @include respond(phone){
+            display: block;
+            position: relative;
+            height: 90vh;
+            overflow-y: scroll;
+        }
     }
 
     &__left{
@@ -128,6 +139,10 @@
     }
 
     &__close{
+        @include respond(phone){
+            
+            position: fixed;
+        }
         &:link,
         &:visited{
             color: $color-gray-dark;
@@ -141,12 +156,9 @@
             line-height: 1;
 
             @include respond(phone){
-
-                &{
-                    color: $color-white;
-                    font-weight: 700;
-                    
-                }
+                color: $color-white;
+                position: fixed;
+            }
 
                 &::after{
                     content: "";
@@ -159,10 +171,11 @@
                     border-radius: 4rem;
                     
                     display: inline-block;
-                }
-            }
+
+                    
+                 }
             
-        }
+            }
 
         &:hover{
             color: $color-primary;
