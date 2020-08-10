@@ -47,12 +47,14 @@
         color: $color-white;
         background-color: $color-primary;
         
+        @include respond(tab-port){
+            @include  absCenter;
+            
+        }
+
         &::after{
             background-color: $color-primary;
         }
-
-       
-
     }
 
     &::after{

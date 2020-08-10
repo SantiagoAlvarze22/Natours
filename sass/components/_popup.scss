@@ -71,7 +71,7 @@
         width: 100%;
 
         @include respond(tab-land){
-            width: 60%;
+            width: 100%;
             height: 20rem;
             float: left;
             margin:2rem;
@@ -80,7 +80,6 @@
         @include respond(tab-port){
             width: 40%;
             height: 20rem;
-            float: left;
             margin:2rem;
         }
 
@@ -139,10 +138,7 @@
     }
 
     &__close{
-        @include respond(phone){
-            
-            position: fixed;
-        }
+        
         &:link,
         &:visited{
             color: $color-gray-dark;
@@ -154,6 +150,7 @@
             display: inline-block;
             transition: all .3s;
             line-height: 1;
+            z-index: 1000000;
 
             @include respond(phone){
                 color: $color-white;
@@ -164,15 +161,19 @@
                     content: "";
                     width: 2.5rem;
                     height: 2.5rem;
-                    background-color: rgba($color: $color-black, $alpha: .4);
+                    background-color: rgba($color: $color-white, $alpha: .1);
                     position: absolute;
                     top:.5rem;
                     right: -.5rem;
-                    border-radius: 4rem;
-                    
+                    border-radius: 4rem; 
                     display: inline-block;
-
                     
+
+                    @include respond(phone){
+                        color: $color-white;
+                        background-color: rgba($color: $color-black, $alpha: .2);
+                        
+                    }
                  }
             
             }
